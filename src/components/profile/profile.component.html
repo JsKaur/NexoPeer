@@ -1,1 +1,58 @@
-<p>profile works!</p>
+<div class="container mx-auto p-4">
+    <div class="bg-gradient-45 shadow-md rounded-lg p-6 relative">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-bold text-white">User Profile</h2>
+        <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600" (click)="closeProfile()">Close</button>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-300">Profile Picture</label>
+        <div class="flex items-center">
+          <img [src]="profilePicture" alt="Profile Picture" class="w-16 h-16 rounded-full mr-4">
+          <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" (click)="toggleEdit('profilePicture')">
+            {{ editProfilePicture ? 'Save' : 'Edit' }}
+          </button>
+          <input *ngIf="editProfilePicture" type="file" (change)="onFileSelected($event)" class="ml-4 text-white">
+        </div>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-300">College</label>
+        <div class="flex items-center justify-between">
+          <span *ngIf="!editCollege" class="text-white">{{ college }}</span>
+          <input *ngIf="editCollege" [(ngModel)]="college" class="border rounded px-2 py-1 text-gray-900" />
+          <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" (click)="toggleEdit('college')">
+            {{ editCollege ? 'Save' : 'Edit' }}
+          </button>
+        </div>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-300">Campus</label>
+        <div class="flex items-center justify-between">
+          <span *ngIf="!editCampus" class="text-white">{{ campus }}</span>
+          <input *ngIf="editCampus" [(ngModel)]="campus" class="border rounded px-2 py-1 text-gray-900" />
+          <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" (click)="toggleEdit('campus')">
+            {{ editCampus ? 'Save' : 'Edit' }}
+          </button>
+        </div>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-300">Interest</label>
+        <div class="flex items-center justify-between">
+          <span *ngIf="!editInterest" class="text-white">{{ interest }}</span>
+          <input *ngIf="editInterest" [(ngModel)]="interest" class="border rounded px-2 py-1 text-gray-900" />
+          <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" (click)="toggleEdit('interest')">
+            {{ editInterest ? 'Save' : 'Edit' }}
+          </button>
+        </div>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-300">Upcoming Event</label>
+        <div class="flex items-center justify-between">
+          <span *ngIf="!editEvent" class="text-white">{{ event }}</span>
+          <input *ngIf="editEvent" [(ngModel)]="event" class="border rounded px-2 py-1 text-gray-900" />
+          <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" (click)="toggleEdit('event')">
+            {{ editEvent ? 'Save' : 'Edit' }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>

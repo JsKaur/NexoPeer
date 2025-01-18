@@ -1,3 +1,5 @@
-<app-navbar></app-navbar>
+<app-navbar [profilePicture]="profilePicture" (profilePictureClicked)="showEditProfile()"></app-navbar>
+<app-profile *ngIf="showProfile" (closeProfileEvent)="showEditProfile()" (profilePictureChanged)="updateProfilePicture($event)"></app-profile>
 <app-dashboard></app-dashboard>
 
+<app-footer></app-footer>
