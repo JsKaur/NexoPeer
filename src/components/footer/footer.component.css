@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures proper padding and border behavior */
+}
+
+.site-footer {
+    background: linear-gradient(45deg, #0e1111, #1c1f1f); /* Subtle gradient */
+    color: #eee; 
+    padding: 40px 0;
+    margin-top:2rem;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); /* Adds a shadow for depth */
+}
+
+.site-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-footer p {
+    margin: 10px 0;
+    font-size: 15px;
+    line-height: 1.6; /* Better readability */
+    color: #ccc;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 10px;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    border-top: 1px solid #444; /* Adds a top border for separation */
+    padding-top: 20px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: #ddd; 
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #89f0f6; /* Eye-catching hover color */
+    text-shadow: 0px 0px 10px #38b1e1; /* Glow effect */
+}
+
+.social-media {
+    margin-top: 30px;
+}
+
+.social-media a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-media a:hover {
+    color: #6dd0ee; /* Matches hover color for links */
+    transform: scale(1.2); /* Enlarges on hover */
+}
+
+.site-footer p:last-of-type {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* Footer Animations */
+.footer-links a::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #62e2eb;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover::before {
+    width: 100%; /* Expanding underline effect */
+}
+
+.site-footer p small {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-links {
+        gap: 20px;
+    }
+
+    .social-media a {
+        font-size: 16px;
+    }
+}
