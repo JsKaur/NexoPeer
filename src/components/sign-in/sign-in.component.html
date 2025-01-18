@@ -1,0 +1,57 @@
+
+<div class="h-screen   md:px-12 px-2 py-8 flex items-center justify-center" id="signup">
+    <div class="bg2 rounded-lg px-8 py-5 w-full md:w-3/6 lg:w-2/6">
+        <p class="text-xl font-black">Login</p>
+        <form >
+        <div class="mt-4">
+            <div >
+                <label for="studentId">Student ID</label>
+                <input type="text" class="w-full mt-2  p-2 outline-none inputd bg" 
+                  
+                  required
+                  id="studentId"
+                  minlength="4"
+                 >  
+                  <!-- <div class="text-sm" style="color:  rgb(247, 151, 151);" *ngIf="username.invalid && ( username.touched || username.dirty)">
+                    <span *ngIf="username.errors?.['required']">username is Required</span>
+                    <span *ngIf="username.errors?.['minlength']">Minimum 4 Characters needed</span>
+                  </div> -->
+            </div>
+        </div>
+
+       
+        
+        <div class="mt-4">
+            <div >
+                <label for="password">Password</label>
+                <input type="password" class="bg w-full mt-2 p-2 outline-none inputd" 
+                 
+                  name="password"
+                  required
+                  id="password"
+                  minlength="7"
+                 >
+                <!-- <div class="text-sm" style="color:  rgb(247, 151, 151);" *ngIf="password.invalid && ( password.touched || password.dirty)">
+                    <span *ngIf="password.errors?.['required']">Password is Required</span>
+                     <span *ngIf="password.errors?.['minlength']">Password Should be more than 6 Characters</span>
+                </div> -->
+            </div>
+        </div>
+       
+
+        <div class="mt-4">
+            <button class="w-full bg-gray-300 text-black font-semibold py-2 rounded hover:to-slate-600" type="submit">SignUp</button>
+        </div>
+        <p class="flex mt-4 items-center justify-center font-semibold">
+            Or
+        </p>
+        <div class="flex items-center justify-center space-x-1 text-zinc-800">
+            <p class="">Don't have an account?</p>
+            <a routerLink="/register" class="underline">SignUp</a>
+        </div>
+        
+        </form>
+
+    </div>
+</div>
+
