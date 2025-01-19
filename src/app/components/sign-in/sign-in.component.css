@@ -1,0 +1,27 @@
+
+* {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+
+  }
+
+  #signup {
+    background: radial-gradient(circle, rgb(45, 151, 190) 29%, rgb(6, 60, 76) 69%);
+  
+  }
+
+.inputd{
+  border: rgb(163, 159, 159) solid 1px
+
+}
+
+.bg {
+    background-color: rgba(199, 206, 208, 0.208);
+
+}
+
+
+
+.bg2{
+    background-color: rgba(199, 206, 208, 0.687);
+}

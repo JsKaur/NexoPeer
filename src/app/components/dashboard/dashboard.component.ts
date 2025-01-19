@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { FooterComponent } from '../footer/footer.component';
+import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from "../../navbar/navbar.component";
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
 
-  imports: [FooterComponent],
+  imports: [FooterComponent, NavbarComponent, RouterLink],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
@@ -23,5 +25,5 @@ export class DashboardComponent {
       console.log('Spline Viewer loaded');
     };
     document.body.appendChild(script);
-  }
+  }
 }

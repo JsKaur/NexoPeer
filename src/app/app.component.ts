@@ -3,14 +3,17 @@ import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HomepageComponent } from "./homepage/homepage.component";
 import { NavbarComponent } from "./navbar/navbar.component";
-import { DashboardComponent } from "../components/dashboard/dashboard.component";
-import { FooterComponent } from "../components/footer/footer.component";
-import { ProfileComponent } from '../components/profile/profile.component';
+import { DashboardComponent } from "./components/dashboard/dashboard.component";
+import { FooterComponent } from "./components/dashboard/footer/footer.component";
+import { ProfileComponent } from './components/profile/profile.component';
+import { StudyGoupsComponent } from "./study-goups/study-goups.component";
+import { NewpostComponent } from "./newpost/newpost.component";
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, HomepageComponent, NavbarComponent, DashboardComponent, FooterComponent, ProfileComponent],
+  imports: [RouterOutlet, CommonModule, HomepageComponent, NavbarComponent, DashboardComponent, FooterComponent, ProfileComponent,  StudyGoupsComponent, NewpostComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

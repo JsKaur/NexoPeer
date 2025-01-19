@@ -1,17 +1,22 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { NavbarComponent } from '../../navbar/navbar.component';
+import { FooterComponent } from '../dashboard/footer/footer.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, NavbarComponent, FooterComponent],
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
   @Output() closeProfileEvent = new EventEmitter<void>();
   @Output() profilePictureChanged = new EventEmitter<string>();
+
+  constructor(private router: Router) {};
 
   editProfilePicture = false;
   editCollege = false;
@@ -59,5 +64,7 @@ export class ProfileComponent {
 
   closeProfile() {
     this.closeProfileEvent.emit();
+    this.router.navigateByUrl('/home');
+
   }
 }

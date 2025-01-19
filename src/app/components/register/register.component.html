@@ -1,0 +1,86 @@
+
+<div class="h-screen   md:px-12 px-2 py-8 flex items-center justify-center" id="signup">
+    <div class="bg2 rounded-lg px-8 py-5 w-full md:w-3/6 lg:w-2/6">
+        <p class="text-xl font-black">Sign Up</p>
+        <form (ngSubmit)="onsubmit()" >
+        <div class="mt-4">
+            <div >
+                <label for="studentId">Student ID</label>
+                <input type="text" class="w-full mt-2  p-2 outline-none inputd bg" 
+                  
+                  required
+                  id="studentId"
+                  name="studentId"
+                  #studentId = "ngModel"
+                  [(ngModel)] = "student.studentId"
+                 
+                 >  
+                  
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <div >
+                <label for="name">Name</label>
+                <input type="text" class="w-full mt-2 p-2 outline-none inputd bg" 
+                  
+                  name="name"
+                  required
+                  
+                  id="name"
+                  #name = "ngModel"
+                  [(ngModel)] = "student.name"
+                 
+                  >
+                  
+            </div>
+        </div>
+        <div class="mt-4">
+            <div >
+                <label for="email">Email</label>
+                <input type="email" class="w-full mt-2 p-2 outline-none inputd bg" 
+                 
+                  name="email"
+                  required
+                  id="email"
+                  #email = "ngModel"
+                  [(ngModel)]="student.email"
+                
+                  >
+                  
+
+            </div>
+        </div>
+        <div class="mt-4">
+            <div >
+                <label for="password">Password</label>
+                <input type="password" class="bg w-full mt-2 p-2 outline-none inputd" 
+                 
+                  name="password"
+                  required
+                  id="password"
+                  #password = "ngModel"
+                  [(ngModel)]="student.password"
+
+                  
+                 >
+                
+            </div>
+        </div>
+       
+
+        <div class="mt-4">
+            <button class="w-full bg-gray-300 text-black font-semibold py-2 rounded hover:to-slate-600" type="submit">SignUp</button>
+        </div>
+        <p class="flex mt-4 items-center justify-center font-semibold">
+            Or
+        </p>
+        <div class="flex items-center justify-center space-x-1 text-zinc-800">
+            <p class="">Already have an account?</p>
+            <a routerLink="/sign-in" class="underline">login</a>
+        </div>
+        
+        </form>
+
+    </div>
+</div>

@@ -1,0 +1,32 @@
+
+
+<app-navbar></app-navbar>
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<div class="min-h-screen bg-[url('/back.jpg')] bg-cover sm:big-contain lg:bg-[75%]" id="home">
+  <div class="max-w-screen-2xl container mx-auto lg:px-20 px-4 flex flex-col lg:flex-row absolute top-20" id="dashboard">
+    <div class="lg:w-1/2 w-full text-2xl p">
+      <div class="space-y-5">
+        <h1 class="text-3xl font-bold mr-11 lg:m-40 lg:mb-10 lg:text-6xl md:text-3xl lg:ml-12">
+          Your Gateway to Meaningful Connections
+        </h1>
+        <button (click)="createPost()"  class="m-11 p-3 bt">
+          Create Post
+        </button>
+        <p class="lg:text-2xl ml-11 text-base">
+          Discover a world where interests align and opportunities thrive.
+        </p>
+      </div>
+    </div>
+    <div class="lg:w-1/2 mt-3 w-full flex justify-center items-center">
+      <img src="/image/home2.png" alt="Book" class="max-w-full h-auto object-contain" id="img">
+    </div>
+  </div>
+</div>
+
+
+
+
+<app-post></app-post>
+
+<app-footer></app-footer>

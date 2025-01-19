@@ -1,0 +1,70 @@
+.bt {
+
+    border: 2px solid rgb(220, 177, 177) ;
+    border-radius: 20px;
+  
+      
+  }
+  .bt:hover{
+      background-color: rgb(220, 177, 177);
+      color: black;
+  }
+  
+  
+  
+  * {
+      /* font-family:Georgia, 'Times New Roman', Times, serif; */
+      color: white;
+      
+  
+  }
+  
+    #home {
+      background: radial-gradient(circle, rgba(105,49,73,1) 0%, rgba(22,61,84,1) 100%);  
+    }
+  
+  
+    .home-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .intro-message {
+      margin-bottom: 20px;
+    }
+    
+    .filter-section {
+      background-color: #163b58;
+   
+      
+    }
+    
+    .filter-options {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    
+    select, input {
+      padding: 8px;
+      font-size: 16px;
+      color: black;
+      
+    }
+    
+   
+    
+    button:hover {
+      background-color: #c07d7d;
+    }
+  
+    .bt2 {
+      color: black;
+      padding: 8px;
+      font-size: 16px;
+    }
+  
+    .txt {
+      color: black;
+    }
